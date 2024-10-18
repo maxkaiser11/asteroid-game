@@ -9,6 +9,8 @@ function love.load()
 	local show_debugging = true
 
 	_G.player = Player(show_debugging)
+
+	_G.background = love.graphics.newImage("assets/background.jpg")
 end
 
 function love.keypressed(key)
@@ -28,6 +30,7 @@ function love.update(dt)
 end
 
 function love.draw()
+	love.graphics.draw(background, 0, 0)
 	player:draw()
 
 	love.graphics.setColor(1, 1, 1, 1)
