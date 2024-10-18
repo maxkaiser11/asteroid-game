@@ -47,8 +47,11 @@ function Player(debugging)
 
 			self.rotation = 360 / 180 * math.pi / FPS
 
-			if love.keyboard.isDown("a") or love.keyboard.isDown("d") or love.keyboard.isDown("kp4") then
+			if love.keyboard.isDown("a") or love.keyboard.isDown("left") or love.keyboard.isDown("kp4") then
 				self.angle = self.angle + self.rotation
+			end
+			if love.keyboard.isDown("d") or love.keyboard.isDown("right") or love.keyboard.isDown("kp6") then
+				self.angle = self.angle - self.rotation
 			end
 		end,
 	}
