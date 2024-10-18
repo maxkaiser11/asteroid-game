@@ -9,6 +9,7 @@ function Player(debugging)
 	return {
 		x = love.graphics.getWidth() / 2,
 		y = love.graphics.getHeight() / 2,
+		sprite = love.graphics.newImage("assets/ship.png"),
 		radius = SHIP_SIZE,
 		angle = VIEW_ANGLE,
 		rotation = 0,
